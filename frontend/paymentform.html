@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Payment Form</title>
+    <link rel="stylesheet" href="paymentform.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Form</h1>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div>
+                    <input type="radio" id="esewa" name="paymentMethod" value="esewa" required>
+                    <label for="esewa">eSewa</label>
+                </div>
+                <div>
+                    <input type="radio" id="khalti" name="paymentMethod" value="khalti" required>
+                    <label for="khalti">Khalti</label>
+                </div>
+            </div>
+            <button type="submit">Submit Payment</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>

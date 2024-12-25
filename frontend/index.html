@@ -7,90 +7,125 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script defer src="./script/login.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Online Art Gallery</a>
+        <a href="index.html" class="logo">Art Gallery</a>
         <nav class="navbar">
-            <a href="index.html">Home</a> 
-            <a href="features.html">Features</a> 
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
             <a href="artwork.html">Artwork</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
-            
-
         </nav>
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
-            <div class="fa fa-search" id="search-btn"></div>
-            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"><span>0</span></div>
             <div class="fa fa-user" id="user-btn"></div>
+            <div class="fa-solid fa-upload" id="upload-btn"></div>
         </div>
-        <form class="search-form">
-            <input type="text" id="search-box" placeholder= "search here..." >
-            <label for="search-box" class="fa fa-search"></label>       
-        </form>
+        
         <div class="shopping-cart">
-                    <div class="head">My Cart</div>
-                    <div class="cart-content">
-                    </div>
-                    <div class="foot">
-                        <div class="Total">Total</div>
-                        <div class="total-price">$0</div>
-                    </div> 
-                    <a href="#" class="btn" id="button">Shop Now</a>
+            <div class="head">My Cart</div>
+            <div class="cart-content">
+            </div>
+            <div class="foot">
+                <div class="total">Total</div>
+                <div class="total-price">Rs 0</div>
+            </div>
+            <button type="button" class="btn-buy">Buy Now</button>
         </div>
         <form action="#" class="login-form" id="login-section">
             <h3>login now</h3>
-            <input type="email" placeholder="your email" class="box">
-            <input type="password" placeholder="enter password" class="box">
+            <input type="email" placeholder="your email" id="email" class="box">
+            <input type="password" placeholder="enter password"  id="password" class="box">
             <P>Don't Have An Account <a href="#" id="reg-box">Register Now></a></P>
             <input type="submit" value="Login Now" class="btn">
         </form>
+        <section class="upload-section">
+            <h2>Upload Your Artwork</h2>
+            <form action="/submit-artwork" method="POST" enctype="multipart/form-data">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required placeholder="Enter your name">
+
+                <label for="artwork-title">Title of Artwork:</label>
+                <input type="text" id="artwork-title" name="title" required placeholder="Enter artwork title">
+
+                <label for="artwork-description">Description:</label>
+                <textarea id="artwork-description" name="description" required
+                    placeholder="Enter description"></textarea>
+
+                <label for="artwork-type">Type of Artwork:</label>
+                <select id="artwork-type" name="type" required>
+                    <option value="drawing">Drawing</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="photography">Photography</option>
+                </select>
+
+                <label for="artwork-image">Upload Image:</label>
+                <input type="file" id="artwork-image" name="artwork-image" accept="image/*" required>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
     </header>
-    <section class="home" id="Home">
+    <section class="home">
         <div class="content">
             <h3>Discover Art<span> You Love From </span>This Online Gallery</h3>
-            <a href="#" class="btn" id="button">Shop Now</a>
         </div>
     </section>
     <section class="featured-artworks">
         <h2>Featured Artworks</h2>
         <div class="arts">
-            <div class="art-item">
+            <div class="art-item" >
                 <img src="image/a6.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 200</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
-            <div class="art-item">
+            <div class="art-item" >
                 <img src="image/img-4.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 400</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
-            <div class="art-item">
-                <img src="image/img-5.png" alt="" class="product-img" >
+            <div class="art-item" >
+                <img src="image/img-5.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 700</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
-            <div class="art-item">
+            <div class="art-item" >
                 <img src="image/a17.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 900</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
             <div class="art-item">
                 <img src="image/a8.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 999.9</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
             <div class="art-item">
                 <img src="image/a15.png" alt="" class="product-img">
+                <p>Artist Name: Aman</p>
+                <p>Type: Drawing</p>
                 <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">$2.50</span>
+                <span class="price">Rs: 1700</span>
                 <a href="#" class="btn">Add To Cart</a>
             </div>
         </div>
@@ -99,9 +134,10 @@
         <div class="footer-content">
             <div class="footer-section about">
                 <h3>About Us</h3>
-                <p>At our Online Art Gallery we are dedicated to showcasing exceptional artworks from talented artists.</p>
+                <p>At our Online Art Gallery we are dedicated to showcasing exceptional artworks from talented artists.
+                </p>
             </div>
-    
+
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -112,7 +148,7 @@
                     <li><a href="features.html">Features</a></li>
                 </ul>
             </div>
-    
+
             <div class="footer-section contact">
                 <h3>Contact Us</h3>
                 <p>Email: abcde@gmail.com</a></p>
@@ -120,16 +156,16 @@
                 <p>Middle Street, Butwal, Rupendehi, 32907</p>
             </div>
         </div>
-    
+
         <div class="footer-bottom">
             <p>&copy; 2024 Online Art Gallery. All rights reserved.</p>
             <div class="social">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
                 <a href=""><i class="fab fa-instagram"></i></a>
-             </div>
+            </div>
         </div>
     </footer>
- <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

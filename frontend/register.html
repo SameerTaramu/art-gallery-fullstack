@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script defer src="./script/register.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Create Account</h1>
-        <form action="#" method="POST">
+        <form  id="registerForm" >
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -27,9 +29,9 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
                 <P>Already Have An Account <a href="index.html#login-section">Login Now></a></P>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" id="registerButton">Register</button>
         </form>
     </div>
-    <script src="script.js"></script>
+    
 </body>
 </html>

@@ -1,15 +1,15 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-const User = require('../models/User');
+const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const { forgotPassword, resetPassword } = require('../controllers/authController');
+
 
 
 
 router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
-
+    console.log(name,email,password)
     try {
       
         const existingUser = await User.findOne({ email });
@@ -64,5 +64,5 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Error logging in', error: error.message });
     }
 });
-router.post('/forgot-password', forgotPassword);
+
 module.exports = router;

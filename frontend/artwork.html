@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,46 +18,97 @@
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a> 
         </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"><span>0</span></div>
+            <div class="fa fa-user" id="user-btn"></div>
+            <div class="fa-solid fa-upload" id="upload-btn"></div>
+
+        </div>
+        <div class="shopping-cart">
+                    <div class="head">My Cart</div>
+                    <div class="cart-content">
+                    </div>
+
+                    <div class="foot">
+                        <div class="total">Total</div>
+                        <div class="total-price">Rs 0</div>
+                    </div> 
+                   <button type="button" class="btn-buy">Buy Now</button>
+        </div>
+        <form action="#" class="login-form" id="login-section">
+            <h3>login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="enter password" class="box">
+            <P>Don't Have An Account <a href="#" id="reg-box">Register Now></a></P>
+            <input type="submit" value="Login Now" class="btn">
+        </form>
+        <section class="upload-section">
+            <h2>Upload Your Artwork</h2>
+            <form action="/submit-artwork" method="POST" enctype="multipart/form-data">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required placeholder="Enter your name">
+        
+                <label for="artwork-title">Title of Artwork:</label>
+                <input type="text" id="artwork-title" name="title" required placeholder="Enter artwork title">
+        
+                <label for="artwork-description">Description:</label>
+                <textarea id="artwork-description" name="description" required placeholder="Enter description"></textarea>
+        
+                <label for="artwork-type">Type of Artwork:</label>
+                <select id="artwork-type" name="type" required>
+                    <option value="drawing">Drawing</option>
+                    <option value="painting">Painting</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="photography">Photography</option>
+                </select>
+        
+                <label for="artwork-image">Upload Image:</label>
+                <input type="file" id="artwork-image" name="artwork-image" accept="image/*" required>
+        
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
     </header>
     <section class="products" id="products">
         <h1 class="heading"> Our <span>Artworks</span></h1>
-        <div class=" product-slider">
+        <div class="product-slider">
             <div class="wrapper">
-                <div class=" box">
-                    <img src="image/a2.png" alt="">
+                <div class="box">
+                    <img src="image/a13.png" alt="" class="product-img">
                     <p>Artist Name: Aman Kunwar</p>
-                    <p>Type: Sketch Art</p>
-                    <h3 class="product-title">Abstract Pic</h3>
-                    <span class="price">$2.50</span>
+                    <p>Type: Drawing</p>
+                    <h3 class="product-title">Mountain  Picture</h3>
+                    <span class="price">Rs: 300</span>
                     <a href="#" class="btn">Add To Cart</a>
                 </div>
-                <div class=" box">
-                    <img src="image/a5.png" alt="">
+                <div class="box">
+                    <img src="image/a7.png" alt="" class="product-img">
                     <p>Artist Name: Pablo Picasso</p>
                     <p>Type: Modern Art</p>
                     <h3 class="product-title">Abstract Pic</h3>
-                    <span class="price">$2.50</span>
+                    <span class="price">Rs: 250</span>
                     <a href="#" class="btn">Add To Cart</a>
                 </div>
-                <div class=" box">
-                    <img src="image/a7.png" alt="">
-                    <p>Artist Name: Sandesh Jung Rada</p>
+                <div class="box">
+                    <img src="image/a22.png" alt="" class="product-img">
+                    <p>Artist Name: Sandesh Pun</p>
                     <p>Type: Aesthetic Art</p>
                     <h3 class="product-title">Abstract Pic</h3>
-                    <span class="price">$2.50</span>
+                    <span class="price">Rs: 250</span>
                     <a href="#" class="btn">Add To Cart</a>
                 </div>
-                <div class=" box">
-                    <img src="image/a9.png" alt="">
+                <div class="box">
+                    <img src="image/a9.png" alt="" class="product-img">
                     <p>Artist Name: Aditya Husain</p>
                     <p>Type: Indian Art</p>
                     <h3 class="product-title">Abstract Pic</h3>
-                    <span class="price">$2.50</span>
+                    <span class="price">Rs: 350</span>
                     <a href="#" class="btn">Add To Cart</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section>   
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
