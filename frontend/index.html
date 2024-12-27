@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="./utils/methods.js"></script>
+    <script defer src="./script/upload.js"></script>w2
+    <script src="./script/index.js" defer></script>
     <script defer src="./script/login.js"></script>
 </head>
 <body>
@@ -25,7 +28,10 @@
             <div class="fa fa-shopping-cart" id="cart-btn"><span>0</span></div>
             <div class="fa fa-user" id="user-btn"></div>
             <div class="fa-solid fa-upload" id="upload-btn"></div>
+          
         </div>
+          <div class="userDetails">
+            </div>
         
         <div class="shopping-cart">
             <div class="head">My Cart</div>
@@ -46,17 +52,14 @@
         </form>
         <section class="upload-section">
             <h2>Upload Your Artwork</h2>
-            <form action="/submit-artwork" method="POST" enctype="multipart/form-data">
-                <label for="contact-name">Your Name:</label>
-                <input type="text" id="contact-name" name="contact-name" required placeholder="Enter your name">
-
-                <label for="artwork-title">Title of Artwork:</label>
-                <input type="text" id="artwork-title" name="title" required placeholder="Enter artwork title">
-
+            <form action="#" id="upload-form" enctype="multipart/form-data">
+            
+            
                 <label for="artwork-description">Description:</label>
-                <textarea id="artwork-description" name="description" required
+                <textarea id="artwork-name" name="name" required
                     placeholder="Enter description"></textarea>
-
+                <label for="artwork-price">Price:</label>
+                <input type="text" id="artwork-price"  name="price" required placeholder="Enter price">
                 <label for="artwork-type">Type of Artwork:</label>
                 <select id="artwork-type" name="type" required>
                     <option value="drawing">Drawing</option>
@@ -64,7 +67,6 @@
                     <option value="sculpture">Sculpture</option>
                     <option value="photography">Photography</option>
                 </select>
-
                 <label for="artwork-image">Upload Image:</label>
                 <input type="file" id="artwork-image" name="artwork-image" accept="image/*" required>
 
@@ -80,54 +82,8 @@
     <section class="featured-artworks">
         <h2>Featured Artworks</h2>
         <div class="arts">
-            <div class="art-item" >
-                <img src="image/a6.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 200</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
-            <div class="art-item" >
-                <img src="image/img-4.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 400</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
-            <div class="art-item" >
-                <img src="image/img-5.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 700</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
-            <div class="art-item" >
-                <img src="image/a17.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 900</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
-            <div class="art-item">
-                <img src="image/a8.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 999.9</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
-            <div class="art-item">
-                <img src="image/a15.png" alt="" class="product-img">
-                <p>Artist Name: Aman</p>
-                <p>Type: Drawing</p>
-                <h3 class="product-title">Abstract Pic</h3>
-                <span class="price">Rs: 1700</span>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
+          
+            
         </div>
     </section>
     <footer>
